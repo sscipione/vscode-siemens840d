@@ -1,0 +1,26 @@
+{
+    "name": "siemens840d",
+    "displayName": "siemens840d",
+    "description": "Siemens 840D Language Support",
+    "version": "0.0.1",
+    "publisher": "OKaeferstein",
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "s840d",
+            "aliases": ["S840D", "s840d"],
+            "extensions": [".spf",".mpf",".def",".tea"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "s840d",
+            "scopeName": "source.s840d",
+            "path": "./syntaxes/s840d.tmLanguage.json"
+        }]
+    }
+}

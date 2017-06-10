@@ -1,0 +1,99 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "S840D",
+    "encoding": "ISO 8859-1",
+    "patterns": [{
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#systemvariables"
+        },
+        {
+            "include": "#mcode"
+        },
+        {
+            "include": "#gcode"
+        },
+        {
+            "include": "#linenumber"
+        },
+        {
+            "include": "#comparison-operator"
+        },
+        {
+            "include": "#condition-operator"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.s840d",
+                "match": "(?i)\\b(abs|ac|acc|acclima|acn|acos|acp|actblocno|addframe|adis|adispos|adisposa|alf|amirror|ang|ap|apr|aprb|aprp|apw|apwb|apwp|apx|ar|arot|arot|arots|as|ascale|asin|aspline|atan2|atol|atrans|auxfudel|auxfudelg|auxfumseq|auxfusync|ax|axctswe|axctswec|axctswed|axname|axstring|axtochan|axtoint|axtospi|bauto|block|blsync|bnat|bound|brisk|briska|bspline|btan|cac|cacn|cacp|calcdat|calcposi|call|callpath|cancel|case|cdc|cdof|cdof2|cdon|cfc|cfin|cfine|cftcp|chan|chandata|chf|chkdm|chkdno|chr|cic|cip|clearm|clrint|cmirror|coarsea|collpair|compcad|compcurv|complete|compof|compon|contdcon|contpron|corrof|cos|coupdef|coupdel|coupof|coupofs|coupon|couponc|coupres|cp|cpbc|cpdef|cpdel|cpfmof|cpfmon|cpfmson|cpfpos|cpfrs|cpla|cplctid|cpldef|cpldel|cplden|cplinsc|cplintr|cplnum|cplof|cplon|cploutsc|cplouttr|cplpos|cplsetval|cpmalarm|cpmbrake|cpmprt|cpmreset|cpmstart|cpof|cpon|cprecof|cprecon|cpres|cprot|cprotdef|cpsettype|cpsyncop|cpsyncop2|cpsyncov|cpsynfip|cpsynfip2|cpsynfiv|cr|crot|crots|crpl|cscale|cspline|ct|ctab|ctabdef|ctabdel|ctabend|ctabexists|ctabfno|ctabfpol|ctabfseg|ctabid|ctabinv|ctabislock|ctablock|ctabmemtyp|ctabmpol|ctabmseg|ctabno|ctabnomem|ctabperiod|ctabpol|ctabpolid|ctabseg|ctabsegid|ctabsev|ctabssv|ctabtep|ctabtev|ctabtmax|ctabtmin|ctabtsp|ctabtsv|ctabunlock|ctol|ctrans|cut2d|cut2df|cut3dc|cut3dcc|cut3dccd|cut3df|cut3dff|cut3dfs|cutconof|cutconon|cutmod|dac|dc|def|default|define|delayfstof|delayfston|deldl|deldtg|delete|delmlowner|delmlres|delmt|delobj|delt|deltc|deltoolenv|diacycofa|diam90|diam90a|diamchan|diamchana|diamcycof|diamof|diamofa|diamon|diamona|dic|dilf|disable|disc|discl|displof|displon|dispr|disr|disrp|dite|dits|dl|do|drfof|drive|drivea|dynfinish|dynnorm|dynpos|dynrough|dynsemifin|dzero|eauto|egdef|egdel|egofc|egofs|egon|egonsyn|egonsyne|else|enable|enat|endfor|endif|endlabel|endloop|endproc|endwhile|esrr|esrs|etan|every|ex|execstring|exectab|execute|exp|extcall|extclose|extern|extopen|false|fctdef|fcub|fda|fendnorm|ffwof|ffwon|fgref|fgroup|fi|fifoctrl|filedate|fileinfo|filesize|filestat|filetime|finea|fl|flin|fma|fnorm|foc|focof|focon|for|fp|fpo|fpr|fpraof|fpraon|frame|frc|frcm|from|ftoc|ftocof|ftocon|ftocof|ftocon|fxs|fxst|fxsw|geoax|get|getactt|getacttd|getd|getdno|getexet|getfreeloc|getselt|gett|gettcor|gettenv|getvarap|getvardft|getvarlim|getvarphu|getvartyp|goto|gotob|gotoc|gotof|gotos|gp|gwpsof|gwpson|id|ids|if|index|inicf|inipo|inire|init|initial|intersec|inttoax|invccw|invcw|invframe|ip|ipobrka|ipoenda|iptrlock|iptrunlock|isaxis|isd|isfile|isnumber|isocall|isvar|jerka|jerklim|jerklima|kont|kontc|kontt|lead|leadof|leadon|lentoax|lfof|lfon|lfpos|lftxt|lfwp|liftfast|lims|lli|ln|lock|longhole|loop|masldef|masldel|maslof|maslofs|maslon|match|maxval|mcall|meac|meaframe|meas|measa|measure|meaw|meawa|mi|mindex|minval|mirror|mmc|modaxval|mov|movt|msg|mvtool|msgs|nametoint|nck|newconf|newmt|newt|norm|nprot|nprotdef|number|oemipo1|oemipo2|of|offn|oma1|oma2|oma3|oma4|oma5|offn|oriaxes|oriaxpos|oric|oriconccw|oriconcw|oriconio|oriconto|oricurve|orid|orieuler|orimks|oripath|oriplane|orireset|orirota|orirotc|orirotr|orirott|orirpy|orirpy2|oris|orisof|orison|orivect|orivirt1|orivirt2|oriwks|os|osb|osc|oscill|osctrl|osd|ose|osnsc|osof|osp1|osp2|oss|osse|ost|ost1|ost2|otol|ovr|ovra|ovrrap|parot|parotof|pcall|pdelayof|pdelayon|phi|phu|pl|pm|po|pocket3|pocket4|polf|polfa|polfmask|polfmlin|poly|polypath|pon|pons|pos|posa|posm|posmt|posp|posrange|pot|pr|prepro|preseton|preseton|prio|prloc|proc|prota|protd|prots|psi|ptp|ptpg0|punchacc|putftoc|putftocf|pw|rac|rdisable|read|redef|release|rep|repeat|repeatb|reposa|reposh|reposha|reposl|reposq|reposqa|reset|resetmon|ret|ric|rindex|rmb|rmbbl|rme|rmebl|rmi|rmibl|rmn|rmnbl|rnd|rndm|rot|rots|round|roundup|rp|rpl|rt|rtliof|rtlion|save|sblof|sblon|sc|scale|scc|scpara|sd|set|setal|setdno|setint|setm|setms|setmth|setpiece|setta|settcor|settia|sf|sin|sirelay|sirelin|sirelout|sireltime|slot1|slot2|soft|softa|son|sons|spath|spcof|spcon|spi|spif1|spif2|splinepath|spn|spof|spos|spos|sposa|spp|sprint|sqrt|sr|sra|st|sta|start|startfifo|stat|stolf|stopfifo|stopre|stopreof|stringis|strlen|substr|supa|svc|synfct|synr|synrw|synw|tan|tang|tangdel|tangof|tangon|tca|tcarr|tci|tcoabs|tcofr|tcofrx|tcofry|tcofrz|theta|tilt|tlift|tml|tmof|tmon|to|toff|toffl|toffof|toffon|toffr|toframe|toframex|toframey|toframez|tolower|toolenv|toolgnt|toolgt|torot|torotof|torotx|toroty|torotz|toupper|towbcs|towkcs|towmcs|towstd|towtcs|towwcs||tr|traang|tracon|tracyl|trafoof|trailof|trailon|trans|transmit|traori|true|trunc|tu|turn|uli|unlock|until|upath|var|velolim|velolima|waitc|waite|waitenc|waitm|waitmc|waitp|waits|walcs0|walcs1|walcs2|walcs3|walcs4|walcs5|walcs6|walcs7|walcs8|walcs9|walcs10|walimof|walimon|when|whenever|while|write|wrtpr)\\b"
+            }]
+        },
+        "strings": {
+            "name": "string.quoted.double.s840d",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [{
+                "name": "constant.character.escape.s840d",
+                "match": "\\\\."
+            }]
+        },
+        "comments": {
+            "name": "comment.s840d",
+            "patterns": [
+                { "include": "#comment-line" }
+            ]
+        },
+        "comment-line": {
+            "patterns": [{
+                "match": "(;).*$\\n?",
+                "name": "comment.line.s840d"
+            }]
+        },
+        "systemvariables": {
+            "patterns": [{
+                "name": "variable.s840d",
+                "match": "(?i)(\\$A_CMDSI|\\$A_DAY|\\$A_DBB|\\$A_DBD|\\$A_DBR|\\$A_DBW|\\$A_DLB|\\$A_DLD|\\$A_DLR|\\$A_DLW|\\$A_DNO|\\$A_GG|\\$A_HOUR|\\$A_IN|\\$A_INA|\\$A_INCO|\\$A_INSE|\\$A_INSED|\\$A_INSEP|\\$A_INSEPD|\\$A_INSI|\\$A_INSID|\\$A_INSIP|\\$A_INSIPD|\\$A_LEVELSID|\\$A_LINK_TRANS_RATE|\\$A_MARKERSI|\\$A_MARKERSID|\\$A_MARKERSIP|\\$A_MARKERSIPD|\\$A_MINUTE|\\$A_MONIFACT|\\$A_MONTH|\\$A_MSECOND|\\$A_OUT|\\$A_OUTA|\\$A_OUTSE|\\$A_OUTSED|\\$A_OUTSEP|\\$A_OUTSEPD|\\$A_OUTSI|\\$A_OUTSID|\\$A_OUTSIP|\\$A_OUTSIPD|\\$A_PBB_IN|\\$A_PBB_OUT|\\$A_PBD_IN|\\$A_PBD_OUT|\\$A_PBR_IN|\\$A_PBR_OUT|\\$A_PBW_IN|\\$A_PBW_OUT|\\$A_PROBE|\\$A_PROTO|\\$A_SECOND|\\$A_STATSID|\\$A_TIMERSI|\\$A_TOOLMLN|\\$A_TOOLMN|\\$A_YEAR|\\$AA_ACC|\\$AA_ACT_INDEX_AX_POS_NO|\\$AA_COUP_ACT|\\$AA_COUP_OFFS|\\$AA_CURR|\\$AA_DELT|\\$AA_DTBB|\\$AA_DTBW|\\$AA_DTEB|\\$AA_DTEPB|\\$AA_DTEPW|\\$AA_DTEW|\\$AA_EG_ACTIVE|\\$AA_EG_AX|\\$AA_EG_DENOM|\\$AA_EG_NUM_LA|\\$AA_EG_NUMERA|\\$AA_EG_SYN|\\$AA_EG_SYNFA|\\$AA_EG_TYPE|\\$AA_ENC_ACTIVE|\\$AA_ENC_COMP|\\$AA_ENC_COMP_IS_MODULO|\\$AA_ENC_COMP_MAX|\\$AA_ENC_COMP_MIN|\\$AA_ENC_COMP_STEP|\\$AA_ENC1_ACTIVE|\\$AA_ENC2_ACTIVE|\\$AA_ESR_ENABLE|\\$AA_ESR_STAT|\\$AA_ETRANS|\\$AA_FXS|\\$AA_IB|\\$AA_IBN|\\$AA_IEN|\\$AA_IM|\\$AA_IW|\\$AA_LEAD_P|\\$AA_LEAD_P_TURN|\\$AA_LEAD_SP|\\$AA_LEAD_SV|\\$AA_LEAD_V|\\$AA_LOAD|\\$AA_MEAACT|\\$AA_MM|\\$AA_MM1|\\$AA_MM2|\\$AA_MM3|\\$AA_MM4|\\$AA_MOTEND|\\$AA_MW|\\$AA_MW1|\\$AA_MW2|\\$AA_MW3|\\$AA_MW4|\\$AA_OFF|\\$AA_OFF_LIMIT|\\$AA_OSCILL_REVERSE_POS1|\\$AA_OSCILL_REVERSE_POS2|\\$AA_OVR|\\$AA_POWER|\\$AA_PROG_INDEX_AX_POS_NO|\\$AA_QEC|\\$AA_QEC_ACCEL_1|\\$AA_QEC_ACCEL_2|\\$AA_QEC_ACCEL_3|\\$AA_QEC_COARSE_STEPS|\\$AA_QEC_DIRECTIONAL|\\$AA_QEC_FINE_STEPS|\\$AA_QEC_LEARNING_RATE|\\$AA_QEC_MEAS_TIME_1|\\$AA_QEC_MEAS_TIME_2|\\$AA_QEC_MEAS_TIME_3|\\$AA_QEC_TIME_1|\\$AA_QEC_TIME_2|\\$AA_REF|\\$AA_S|\\$AA_SCPAR|\\$AA_SCTRACE|\\$AA_SOFTENDN|\\$AA_SOFTENDP|\\$AA_STAT|\\$AA_SYNC|\\$AA_TORQUE|\\$AA_TYP|\\$AA_VACTB|\\$AA_VACTM|\\$AA_VACTW|\\$AA_VC|\\$AC_ACTUAL_PARTS|\\$AC_ALARM_STAT|\\$AC_ASUP|\\$AC_AXCTSWA|\\$AC_CUTTING_TIME|\\$AC_CYCLE_TIME|\\$AC_DELT|\\$AC_DRF\\$AC_DTBB|\\$AC_DTBW|\\$AC_DTEB|\\$AC_DTEW|\\$AC_FCT0|\\$AC_FCT1|\\$AC_FCT1C|\\$AC_FCT1LL|\\$AC_FCT1UL|\\$AC_FCT2|\\$AC_FCT2C|\\$AC_FCT2LL|\\$AC_FCT2UL|\\$AC_FCT3|\\$AC_FCT3C|\\$AC_FCT3LL|\\$AC_FCT3UL|\\$AC_FCTLL|\\$AC_FCTUL|\\$AC_FIFO1|\\$AC_FIFO10|\\$AC_FIFO2|\\$AC_IPO_BUF|\\$AC_IW_STAT|\\$AC_IW_TU|\\$AC_LIFTFAST|\\$AC_MARKER|\\$AC_MEA|\\$AC_MONMIN|\\$AC_MSNUM|\\$AC_OPERATING_TIME|\\$AC_OVR|\\$AC_PARAM|\\$AC_PATHN|\\$AC_PLTBB|\\$AC_PLTEB|\\$AC_PRESET|\\$AC_PROG|\\$AC_PRTIME_A|\\$AC_PRTIME_A_INC|\\$AC_PRTIME_M|\\$AC_PRTIME_M_INC|\\$AC_REQUIRED_PARTS|\\$AC_RETPOINT|\\$AC_SDIR|\\$AC_SMODE|\\$AC_SPECIAL_PARTS|\\$AC_STAT|\\$AC_SYNA_MEM|\\$AC_TC_FCT|\\$AC_TC_LFN|\\$AC_TC_LFO|\\$AC_TC_LTN|\\$AC_TC_LTO|\\$AC_TC_MFN|\\$AC_TC_MFO|\\$AC_TC_MTN|\\$AC_TC_MTO|\\$AC_TC_STATUS|\\$AC_TC_THNO|\\$AC_TC_TNO|\\$AC_TIME|\\$AC_TIMEC|\\$AC_TIMER|\\$AC_TOTAL_PARTS|\\$AC_TRAFO|\\$AC_VACTB|\\$AC_VACTW|\\$AC_VC|\\$AN_AXCTAS|\\$AN_AXCTSWA|\\$AN_CEC|\\$AN_CEC_DIRECTION|\\$AN_CEC_INPUT_AXIS|\\$AN_CEC_IS_MODULO|\\$AN_CEC_MAX|\\$AN_CEC_MIN|\\$AN_CEC_MULT_BY_TABLE|\\$AN_CEC_OUTPUT_AXIS|\\$AN_CEC_STEP|\\$AN_ESR_TRIGGER|\\$AN_POWERON_TIME|\\$AN_SETUP_TIME|\\$MC_COMPESS_VELO_TOL|\\$P_ACTBFRAME|\\$P_ACTFRAME|\\$P_ACTGEOAX|\\$P_ACTID|\\$P_AD|\\$P_AEP|\\$P_APDV|\\$P_APR|\\$P_ATPG|\\$P_AXN1|\\$P_AXN2|\\$P_AXN3|\\$P_BFRAME|\\$P_CHBFR|\\$P_CHBFRAME|\\$P_CHBFRMASK|\\$P_CTABDEF|\\$P_D|\\$P_DRYRUN|\\$P_EG_BC|\\$P_EP|\\$P_EXTGG|\\$P_F|\\$P_FA|\\$P_GG|\\$P_GWPS|\\$P_H|\\$P_IFRAME|\\$P_ISTEST|\\$P_MC|\\$P_MMCA|\\$P_MSNUM|\\$P_NCBFR|\\$P_NCBFRAME|\\$P_NCBFRMASK|\\$P_OFFN|\\$P_PATH|\\$P_PFRAME|\\$P_PROG|\\$P_PROGPATH|\\$P_REPINF|\\$P_S|\\$P_SDIR|\\$P_SEARCH|\\$P_SEARCH1|\\$P_SEARCH2|\\$P_SEARCHL|\\$P_SIM|\\$P_SMODE|\\$P_STACK|\\$P_SUBPAR|\\$P_TCANG|\\$P_TOOL|\\$P_TOOLEXIST|\\$P_TOOLL|\\$P_TOOLND|\\$P_TOOLNO|\\$P_TOOLR|\\$P_UBFR|\\$P_UIFR|\\$P_UIFRNUM|\\$P_VDITCP|\\$PI|\\$SA_LEAD_TYPE|\\$SC_PA_ACTIV_IMMED|\\$SC_PA_CENT_ABS|\\$SC_PA_CENT_ORD|\\$SC_PA_CONT_ABS|\\$SC_PA_CONT_NUM|\\$SC_PA_CONT_ORD|\\$SC_PA_CONT_TYP|\\$SC_PA_LIM_3DIM|\\$SC_PA_MINUS_LIM|\\$SC_PA_ORI|\\$SC_PA_PLUS_LIM|\\$SC_PA_T_W|\\$SN_PA_ACTIV_IMMED|\\$SN_PA_CENT_ABS|\\$SN_PA_CENT_ORD|\\$SN_PA_CONT_ABS|\\$SN_PA_CONT_NUM|\\$SN_PA_CONT_ORD|\\$SN_PA_CONT_TYP|\\$SN_PA_LIM_3DIM|\\$SN_PA_MINUS_LIM|\\$SN_PA_ORI|\\$SN_PA_PLUS_LIM|\\$SN_PA_T_W|\\$TC_ADPT1|\\$TC_ADPT2|\\$TC_ADPT3|\\$TC_ADPTT|\\$TC_CARR1|\\$TC_CARR2|\\$TC_CARR3|\\$TC_CARR4|\\$TC_CARR5|\\$TC_CARR6|\\$TC_CARR7|\\$TC_CARR8|\\$TC_CARR9|\\$TC_CARR10|\\$TC_CARR11|\\$TC_CARR12|\\$TC_CARR13|\\$TC_CARR14|\\$TC_CARR17|\\$TC_DP1|\\$TC_DP10|\\$TC_DP11|\\$TC_DP12|\\$TC_DP13|\\$TC_DP14|\\$TC_DP15|\\$TC_DP17|\\$TC_DP16|\\$TC_DP18|\\$TC_DP19|\\$TC_DP2|\\$TC_DP20|\\$TC_DP21|\\$TC_DP22|\\$TC_DP23|\\$TC_DP24|\\$TC_DP25|\\$TC_DP3|\\$TC_DP4|\\$TC_DP5|\\$TC_DP6|\\$TC_DP7|\\$TC_DP8|\\$TC_DP9|\\$TC_DPC1|\\$TC_DPC10|\\$TC_DPC2|\\$TC_DPCE|\\$TC_DPCi|\\$TC_DPCS1|\\$TC_DPCS10|\\$TC_DPCS2|\\$TC_DPCSi|\\$TC_DPH|\\$TC_ECP13|\\$TC_ECP14|\\$TC_ECP21|\\$TC_ECP23|\\$TC_ECP24|\\$TC_ECP31|\\$TC_ECP33|\\$TC_ECP34|\\$TC_ECP41|\\$TC_ECP43|\\$TC_ECP44|\\$TC_ECP51|\\$TC_ECP53|\\$TC_ECP54|\\$TC_ECP61|\\$TC_ECP63|\\$TC_ECP64|\\$TC_ECP71|\\$TC_MAMP1|\\$TC_MAMP2|\\$TC_MAMP3|\\$TC_MAP1|\\$TC_MAP2|\\$TC_MAP3|\\$TC_MAP4|\\$TC_MAP5|\\$TC_MAP6|\\$TC_MAP7|\\$TC_MAP8|\\$TC_MAP9|\\$TC_MAPC1|\\$TC_MAPC10|\\$TC_MAPC2|\\$TC_MAPCS1|\\$TC_MAPCS10|\\$TC_MAPCS2|\\$TC_MDP1|\\$TC_MDP2|\\$TC_MLSR|\\$TC_MOP1|\\$TC_MOP11|\\$TC_MOP13|\\$TC_MOP15|\\$TC_MOP2|\\$TC_MOP3|\\$TC_MOP4|\\$TC_MOP5|\\$TC_MOP6|\\$TC_MOPC1|\\$TC_MOPC10|\\$TC_MOPC2|\\$TC_MOPCS1|\\$TC_MOPCS10|\\$TC_MOPCS2|\\$TC_MPP1|\\$TC_MPP2|\\$TC_MPP3|\\$TC_MPP4|\\$TC_MPP5|\\$TC_MPP6|\\$TC_MPP7|\\$TC_MPPC1|\\$TC_MPPC10|\\$TC_MPPC2|\\$TC_MPPCS1|\\$TC_MPPCS10|\\$TC_MPPCS2|\\$TC_MPTH|\\$TC_SCP13|\\$TC_SCP14|\\$TC_SCP21|\\$TC_SCP23|\\$TC_SCP24|\\$TC_SCP31|\\$TC_SCP33|\\$TC_SCP34|\\$TC_SCP41|\\$TC_SCP43|\\$TC_SCP44|\\$TC_SCP51|\\$TC_SCP53|\\$TC_SCP54|\\$TC_SCP61|\\$TC_SCP63|\\$TC_SCP64|\\$TC_SCP71|\\$TC_TP1|\\$TC_TP10|\\$TC_TP11|\\$TC_TP2|\\$TC_TP3|\\$TC_TP4|\\$TC_TP5|\\$TC_TP6|\\$TC_TP7|\\$TC_TP8|\\$TC_TP9|\\$TC_TPC1|\\$TC_TPC10|\\$TC_TPC2|\\$TC_TPCS1|\\$TC_TPCS10|\\$TC_TPCS2|\\$TC_TPG1|\\$TC_TPG2|\\$TC_TPG3|\\$TC_TPG4|\\$TC_TPG5|\\$TC_TPG6|\\$TC_TPG7|\\$TC_TPG8|\\$TC_TPG9|\\$VA_COUP_OFFS|\\$VA_CURR|\\$VA_DPE|\\$VA_EG_SYNCDIFF|\\$VA_IM|\\$VA_IM1|\\$VA_IM2|\\$VA_IS|\\$VA_LOAD|\\$VA_POWER|\\$VA_PRESSURE_A|\\$VA_PRESSURE_B|\\$VA_TORQUE|\\$VA_VACTM|\\$VA_VALVELIFT)"
+            }]
+        },
+        "mcode": {
+            "patterns": [{
+                "name": "entity.name.tag.s840d",
+                "match": "(M)[0-9]{1,4}"
+            }]
+        },
+        "gcode": {
+            "patterns": [{
+                "name": "entity.name.function.s840d",
+                "match": "(G)[0-9]{1,2}"
+            }]
+        },
+        "linenumber": {
+            "patterns": [{
+                "name": "entity.other.s840d",
+                "match": "(N)[0-9]{1,4}"
+            }]
+        },
+        "comparison-operator": {
+            "patterns": [{
+                "match": "==|!=|>|<|greater|greater=|less|less=|not",
+                "name": "keyword.operator.comparison.s840d"
+            }]
+        },
+        "condition-operator": {
+            "patterns": [{
+                "match": "!|&&|\\|\\||:|([^A-Za-z0-9]|\\b)and([^A-Za-z0-9]|\\b)|([^A-Za-z0-9])or([^A-Za-z0-9])",
+                "name": "keyword.operator.condition.s840d"
+            }]
+        }
+    },
+    "scopeName": "source.s840d"
+}
