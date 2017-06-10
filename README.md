@@ -2,6 +2,11 @@
 
 This is the README for your extension "siemens840d". After writing up a brief description, we recommend including the following sections.
 
+## Sources
+
+- https://raw.githubusercontent.com/Armitxes/VSCode_SQF/master/syntaxes/sqf.json
+- https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
+
 ## Features
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
@@ -11,6 +16,8 @@ For example if there is an image subfolder under your extension project workspac
 \!\[feature X\]\(images/feature-x.png\)
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+
+![](https://raw.githubusercontent.com/deathaxe/sublime-s840d/master/example.jpg)
 
 ## Requirements
 
