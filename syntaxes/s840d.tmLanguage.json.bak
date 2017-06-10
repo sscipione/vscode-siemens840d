@@ -87,7 +87,7 @@
         },
         "assignment-operator": {
             "match": "=|<<",
-            "name": "keyword.operator.s840d"
+            "name": "entity.name.tag.s840d"
         },
         "arithmetik-operators": {
             "patterns": [{

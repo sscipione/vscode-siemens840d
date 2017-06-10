@@ -6,6 +6,9 @@
             "include": "#keywords"
         },
         {
+            "include": "#operators"
+        },
+        {
             "include": "#strings"
         },
         {
@@ -22,17 +25,21 @@
         },
         {
             "include": "#linenumber"
-        },
-        {
-            "include": "#operators"
         }
     ],
     "repository": {
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.s840d",
-                "match": "(?i)\\b(abs|ac|acc|acn|acp|acos|adis|adispos|alf|amirror|and|ang|ap|apr|apw|ar|arot|arot|rpl=|as|ascale|asin|aspline|atan2|atrans|ax|axcswap|axis|axname|axstring|axis|b_and|b_not|b_or|b_xor|bauto|blsync|bnat|bool|brisk|briska|bspline|btan|cac|cacn|cacp|calcdat|call|cancel|case|cdc|cdof|cdon|cfc|cfin|cftcp|chan|chandata|char|chf|chr|chkdno|cic|cip|clal|clearm|clgof|clgon|clrint|cmirror|compof|compon|compcurv|contpron|cos|coupdef|coupdel|coupof|coupon|coupres|cp|cprecof|cprecon|cprot|cprotdef|cr|crot|cscale|cspline|ctab|ctabdef|ctabdel|ctabend|ctabinv|ct|ctrans|cut2d|cut2df|cut3dc|cut3df|cut3dff|cut3dfs|cutcono|cutconon|dc|def|default|define|delt|diamof|diamon|diam90|dilf|disable|disc|displof|dispr|disr|dite|dits|div|dl|drfof|drive|drivea|dzero|eauto|egdef|egdel|egofc|egofs|egon|egonsyn|else|enable|enat|endfor|endif|endloop|endproc|endwhile|etan|every|exectab|execute|exp|extern|fa|fad|false|fctdef|fcub|fd|fda|ffwof|ffwon|fgref|fgroup|fifolen|fl|flin|fma|fnorm|for|fori1|fori2|fp|fpo|fpr|fpr|fpraof|fpraon|frame|frc|frcm|ftoc|ftocof|ftocon|fxs|fxst|fxsw|get|getd|getselt|gett|gotof|gotob|gwpsof|gwpson|ids|if|index|init|int|intersec|isaxis|isd|isnumber|jerka|kont|lead|leadof|leadofp|leadon|leadonp|lfof|lfon|lftxt|lfwp|liftfast|lims|ln|lock|log|loop|mcall|meac|meaframe|measa|meaw|meawa|mi|mindex|mirror|mmc|mod|mov|msg|msgn|msgs|newconf|newt|norm|not|nprot|nprotdef|number|oemipo1|oemipo2|of|offn|oma1|oma2|oma3|oma4|oma5|offn|or|oric|orid|orieuler|orimachax|orimks|orirpy|oris|orivirt1|orivirt2|orivirtax|oriwks|os|osc|oscill|osctrl|ose|osof|osp1|osp2|ossosse|ost1|ost2|ovr|ovra|pdelayof|pdelayon|pl|pm|po|polf|poly|pon|pons|pos|posa|posp|pot|pr|preseton|prio|proc|ptp|putftoc|putftocf|pw|qeclrnof|qeclrnon|qu|rdisable|readal|real|redef|release|rep|repeat|repeatb|reposa|reposh|reposha|reposl|reposq|reposqa|reset|ret|rindex|rmb|rme|rmi|rnd|rndm|rot|round|rp|rpl|rt|save|sblof|sblon|sc|scale|sd|set|setal|setdno|setint|setm|setms|setpiece|sf|sin|soft|softa|son|sons|spath|spcof|spcon|spif1|spif2|splinepath|spof|spn|spp|spos|sposa|sqrt|sr|sra|st|sta|start|stat|startfifo|stopfifo|stopre|stopreof|string|strlen|substr|supa|synfct|synr|synrw|synw|tan|tang|tangof|tangon|tcarr|tcoabs|tcofr|tilt|tmof|tmon|to|toframe|tolower|toupper|tr|traang|traceof|traceon|tracon|tracyl|trafoof|trailof|trailon|trans|traori|true|trunc|tu|turn|unlock|until|upath|var|waitc|waitm|waitmc|waitp|waits|walimof|walimon|while|write|xor)\\b"
+                "match": "(?i)\\b(if|endif|msg|ret|def|define|as|cpdel|call)\\b"
             }]
+        },
+        "operators": {
+            "name": "keyword.operator.s840d",
+            "patterns": [
+                { "include": "#arithmetik-operators" },
+                { "include": "#comparison-operators" }
+            ]
         },
         "strings": {
             "name": "string.quoted.double.s840d",
@@ -77,27 +84,15 @@
                 "match": "(N)[0-9]{1,4}"
             }]
         },
-        "operators": {
-            "name": "keyword.operator.s840d",
-            "patterns": [
-                { "include": "#assignment-operator" },
-                { "include": "#arithmetik-operators" },
-                { "include": "#comparison-operators" }
-            ]
-        },
-        "assignment-operator": {
-            "match": "=|<<",
-            "name": "keyword.operator.s840d"
-        },
         "arithmetik-operators": {
             "patterns": [{
-                "match": "(?i)(%|//|/|div|mod)",
+                "match": "(?i)(+|-|*|:|%|//|/|div|mod)",
                 "name": "keyword.operator.arithmetik.s840d"
             }]
         },
-        "comparison-operator": {
+        "comparison-operators": {
             "patterns": [{
-                "match": "==|!=|>|<|greater|greater=|less|less=|not",
+                "match": "(?i)(==|<>|>|<|>=|<=|not|and|or|xor|b_not|b_and|b_xor|b_or)",
                 "name": "keyword.operator.comparison.s840d"
             }]
         }
