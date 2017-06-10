@@ -1,4 +1,4 @@
-# siemens840d README
+# [Siemens 840D SL](http://w3.siemens.com/mcms/mc-systems/en/automation-systems/cnc-sinumerik/sinumerik-controls/sinumerik-840/sinumerik-840d-sl/pages/sinumerik-840d-sl.aspx) language support for [Visual Studio Code](https://code.visualstudio.com/)
 
 This is the README for your extension "siemens840d". After writing up a brief description, we recommend including the following sections.
 
@@ -15,6 +15,14 @@ For example if there is an image subfolder under your extension project workspac
 ## Requirements
 
 If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+
+## Installation
+
+### Installing the extension Locally
+Just clone the [GitLab repository](http://gitlab.khype.ddnss.de/SystemTools/vscode-siemens840d) to your local extensions folder:
+* Windows: `%USERPROFILE%\.vscode\extensions`
+* Mac / Linux: `$HOME/.vscode/extensions` 
+
 
 ## Extension Settings
 
@@ -37,7 +45,7 @@ Users appreciate release notes as you update your extension.
 
 ### 1.0.0
 
-Initial release of ...
+Initial release of 
 
 ### 1.0.1
 
@@ -47,19 +55,4 @@ Fixed issue #.
 
 Added features X, Y, and Z.
 
------------------------------------------------------------------------------------------------------------
 
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
