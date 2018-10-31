@@ -7,6 +7,17 @@ This is the README for your extension "siemens840d". After writing up a brief de
 - https://raw.githubusercontent.com/Armitxes/VSCode_SQF/master/syntaxes/sqf.json
 - https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
 
+## Install
+
+Open windows command line and switch to the drive (e.g. `C:`) where you installed windows then switch to the vscode extension directory and clone/checkout the reposisitory
+
+```sh
+cd %USERPROFILE%/.vscode/extensions
+git clone https://lcg01.ludwigsburg.inetgleason.com/okaeferstein/vscode-siemens840d.git
+```
+
+Close / open vscode and you should have `S840D` syntax type added to VSCode.
+
 ## Features
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
