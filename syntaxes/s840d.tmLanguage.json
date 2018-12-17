@@ -128,48 +128,51 @@
             },
             {
                 "name": "variable.s840d.rp_",
-                "match": "_RP"
+                "match": "\\b_RP"
             },
             {
                 "name": "variable.s840d.r",
-                "match": "(R[0-9]{1,4})|R"
+                "match": "(\\bR[0-9]{1,4})|\\bR[=]|\\bR "
             }]
         },
         "functions": {
             "patterns": [{
                 "name": "entity.name.function.s840d.d",
-                "match": "(D[0-9]{1,4})|DL|D"
+                "match": "\\bD[0-9]+|\\bD[=]|\\bD |\\bDL"
             },
             {
                 "name": "entity.name.function.s840d.fword",
-                "match": "(F)[0-9]+|FZ|FD|FB|FAD|FA|F"
+                "match": "\\bF[0-9]+|\\bF[=]|\\bF |\\bF[ABDZ]{1,2}"
             },
             {
                 "name": "entity.name.function.s840d.gcode",
-                "match": "(G)[0-9]{1,2}|G"
+                "match": "(\\bG)[0-9]{1,2}|\\bG[=]|\\bG "
             },
             {
                 "name": "entity.name.function.s840d.hcode",
-                "match": "(H)[0-9]{1,2}|H"
+                "match": "(\\bH)[0-9]{1,2}|\\bH[=]|\\bH "
             },
             {
                 "name": "entity.name.function.s840d.mcode",
-                "match": "(M)[0-9]{1,4}|M"
+                "match": "(\\bM)[0-9]{1,4}|\\bM[=]|\\bM "
             },
             {
                 "name": "entity.name.function.s840d.p",
-                "match": "(P)[0-9]{1,4}|P"
+                "match": "(\\bP)[0-9]{1,4}|\\bP[=]|\\bP "
             },
             {
                 "name": "entity.name.function.s840d.sword",
-                "match": "(S)[0-9]{1,4}|S"
-            }
-            ]
+                "match": "(\\bS)[0-9]{1,2}|\\bS[=]|\\bS "
+            }]
         },
         "linenumber": {
             "patterns": [{
                 "name": "constant.numeric.s840d",
-                "match": "(N)[0-9]{1,4}"
+                "match": "N[0-9]+"
+            },
+            {
+                "name": "constant.numeric.s840d.label",
+                "match": "__.+:"
             }]
         },
         "operators": {
