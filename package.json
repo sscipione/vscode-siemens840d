@@ -7,14 +7,12 @@
     "engines": {
         "vscode": "^1.12.0"
     },
-    "categories": [
-        "Languages"
-    ],
+    "categories": ["Programming Languages"],
     "contributes": {
         "languages": [{
             "id": "s840d",
-            "aliases": ["S840D", "s840d"],
-            "extensions": [".spf",".mpf",".def",".tea"],
+            "aliases": ["S840D", "s840d", "GCODE"],
+            "extensions": [".spf",".mpf",".def",".tea", ".iso", ".nc", ".cnc", ".km2", ".arc", ".tpl"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
