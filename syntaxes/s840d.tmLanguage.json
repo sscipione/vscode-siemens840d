@@ -127,6 +127,10 @@
                 "match": "(?i)((\\$(A|C|M|P|O|R|S|T|V)|(\\$\\$(M|S)))\\w+)"
             },
             {
+                "name": "variable.s840d.axis",
+                "match": "\\b(A|B|C|X|Y|Z)[0-9]{0,5}\\b"
+            },
+            {
                 "name": "variable.s840d.rp_",
                 "match": "\\b_RP\\b"
             },
@@ -176,7 +180,11 @@
         "linenumber": {
             "patterns": [            {
                 "name": "constant.numeric.s840d.nr",
-                "match": "\\b[0-9]\\b"
+                "match": "\\b[0-9]+\\b"
+            },
+            {
+                "name": "constant.numeric.s840d.hide",
+                "match": "\\n\\s*\\/[0-7]?"
             },
             {
                 "name": "constant.numeric.s840d",
