@@ -137,16 +137,16 @@
         },
         "functions": {
             "patterns": [{
-                "name": "entity.name.function.s840d.d",
+                "name": "entity.name.function.s840d.toolCorrection",
                 "match": "\\bD[0-9]+|\\bD\\b|\\bDL\\b"
             },
             {
-                "name": "entity.name.function.s840d.fword",
+                "name": "entity.name.function.s840d.feedWord",
                 "match": "\\bF[0-9]+|\\bF\\b|\\bF[ABDZ]{1,2}\\b"
             },
             {
                 "name": "entity.name.function.s840d.gcode",
-                "match": "(\\bG)[0-9]{1,2}|\\bG\\b"
+                "match": "(\\bG)[0-9]{1,3}|\\bG\\b"
             },
             {
                 "name": "entity.name.function.s840d.hcode",
@@ -157,11 +157,11 @@
                 "match": "(\\bM)[0-9]{1,4}|\\bM\\b"
             },
             {
-                "name": "entity.name.function.s840d.p",
+                "name": "entity.name.function.s840d.subprogrammLoops",
                 "match": "(\\bP)[0-9]{1,4}|\\bP\\b"
             },
             {
-                "name": "entity.name.function.s840d.sword",
+                "name": "entity.name.function.s840d.toolSpeed",
                 "match": "(\\bS)[0-9]{1,2}|\\bS\\b"
             }]
         },
@@ -184,25 +184,36 @@
             "patterns": [
                 { "include": "#assignment-operator" },
                 { "include": "#arithmetik-operators" },
-                { "include": "#comparison-operators" }
+                { "include": "#comparison-operators" },
+                { "include": "#string-operators" }
             ]
         },
         "assignment-operator": {
             "patterns": [{
-                "match": "=|<<",
-                "name": "keyword.operator.s840d"
+                "name": "keyword.operator.s840d",
+                "match": "\\b=\\b"
                 }]
             },
         "arithmetik-operators": {
             "patterns": [{
-                "match": "(?i)(%|//|/|div|mod)",
-                "name": "keyword.operator.arithmetik.s840d"
+                "name": "keyword.operator.arithmetik.s840d",
+                "match": "\\*|\\+|-|\\/\\/|\\/|\\bdiv\\b|\\bmod\\b|%"
+            },
+            {
+                "name": "keyword.operator.bool.s840d",
+                "match": "not|b_not|b_and|b_xor|b_or|and|xor|or"
             }]
         },
         "comparison-operator": {
             "patterns": [{
-                "match": "==|!=|>|<|greater|greater=|less|less=|not",
-                "name": "keyword.operator.comparison.s840d"
+                "name": "keyword.operator.comparison.s840d",
+                "match": "==|<|>|>=|<=|<>"
+            }]
+        },
+        "string-operator": {
+            "patterns": [{
+                "name": "keyword.operator.string.s840d",
+                "match": "<<"
             }]
         }
     },
