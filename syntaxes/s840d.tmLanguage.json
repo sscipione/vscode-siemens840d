@@ -8,7 +8,8 @@
         { "include": "#comments" },
         { "include": "#systemvariables" },
         { "include": "#functions" },
-        { "include": "#linenumber" },
+        { "include": "#support" },
+        { "include": "#constants" },
         { "include": "#operators" }
     ],
     "repository": {
@@ -177,7 +178,15 @@
                 "match": "(\\bS)[0-9]{1,2}|\\bS\\b"
             }]
         },
-        "linenumber": {
+		"support":{
+			"patterns": [
+				{
+					"match": "axis|bool|char|frame|int|real|string",
+					"name": "support.class.scl"
+                }
+            ]
+		},
+        "constants": {
             "patterns": [            {
                 "name": "constant.numeric.s840d.nr",
                 "match": "\\b[0-9]+\\b"
@@ -187,7 +196,7 @@
                 "match": "\\n\\s*\\/[0-7]?"
             },
             {
-                "name": "constant.numeric.s840d",
+                "name": "constant.numeric.s840d.linenumber",
                 "match": "\\bN[0-9]+\\b"
             },
             {
