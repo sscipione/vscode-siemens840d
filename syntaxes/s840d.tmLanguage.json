@@ -128,45 +128,49 @@
             },
             {
                 "name": "variable.s840d.rp_",
-                "match": "\\b_RP"
+                "match": "\\b_RP\\b"
             },
             {
                 "name": "variable.s840d.r",
-                "match": "(\\bR[0-9]{1,4})|\\bR[=]|\\bR "
+                "match": "(\\bR[0-9]{1,4})|\\bR\\b"
             }]
         },
         "functions": {
             "patterns": [{
                 "name": "entity.name.function.s840d.d",
-                "match": "\\bD[0-9]+|\\bD[=]|\\bD |\\bDL"
+                "match": "\\bD[0-9]+|\\bD\\b|\\bDL\\b"
             },
             {
                 "name": "entity.name.function.s840d.fword",
-                "match": "\\bF[0-9]+|\\bF[=]|\\bF |\\bF[ABDZ]{1,2}"
+                "match": "\\bF[0-9]+|\\bF\\b|\\bF[ABDZ]{1,2}\\b"
             },
             {
                 "name": "entity.name.function.s840d.gcode",
-                "match": "(\\bG)[0-9]{1,2}|\\bG[=]|\\bG "
+                "match": "(\\bG)[0-9]{1,2}|\\bG\\b"
             },
             {
                 "name": "entity.name.function.s840d.hcode",
-                "match": "(\\bH)[0-9]{1,2}|\\bH[=]|\\bH "
+                "match": "(\\bH)[0-9]{1,2}|\\bH\\b"
             },
             {
                 "name": "entity.name.function.s840d.mcode",
-                "match": "(\\bM)[0-9]{1,4}|\\bM[=]|\\bM "
+                "match": "(\\bM)[0-9]{1,4}|\\bM\\b"
             },
             {
                 "name": "entity.name.function.s840d.p",
-                "match": "(\\bP)[0-9]{1,4}|\\bP[=]|\\bP "
+                "match": "(\\bP)[0-9]{1,4}|\\bP\\b"
             },
             {
                 "name": "entity.name.function.s840d.sword",
-                "match": "(\\bS)[0-9]{1,2}|\\bS[=]|\\bS "
+                "match": "(\\bS)[0-9]{1,2}|\\bS\\b"
             }]
         },
         "linenumber": {
-            "patterns": [{
+            "patterns": [            {
+                "name": "constant.numeric.s840d.nr",
+                "match": "[0-9]"
+            },
+            {
                 "name": "constant.numeric.s840d",
                 "match": "N[0-9]+"
             },
