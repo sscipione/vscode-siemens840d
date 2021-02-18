@@ -2,7 +2,7 @@
     "name": "siemens840d",
     "displayName": "siemens840d",
     "description": "Siemens 840D Language Support",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "OKaeferstein",
     "engines": {
         "vscode": "^1.12.0"
@@ -12,7 +12,7 @@
         "languages": [{
             "id": "s840d",
             "aliases": ["S840D", "s840d", "GCODE"],
-            "extensions": [".spf",".mpf",".def",".tea", ".iso", ".nc", ".cnc", ".km2", ".arc", ".tpl"],
+            "extensions": [".spf",".mpf",".def",".tea", ".iso", ".nc", ".cnc", ".km2", ".arc", ".tpl", ".cmc"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
