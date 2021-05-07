@@ -181,7 +181,7 @@
 		"support":{
 			"patterns": [
 				{
-					"match": "axis|bool|char|frame|int|real|string",
+					"match": "\\b(axis|bool|char|frame|int|real|string)\\b",
 					"name": "support.class.scl"
                 }
             ]
