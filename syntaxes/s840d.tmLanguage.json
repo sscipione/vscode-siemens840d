@@ -118,18 +118,18 @@
         },
         "comment-line": {
             "patterns": [{
-                "match": "(;).*$\\n?",
-                "name": "comment.line.s840d"
+                "name": "comment.line.s840d",
+                "match": "(;).*$\\n?"
             }]
         },
         "systemvariables": {
             "patterns": [{
                 "name": "variable.s840d.system",
-                "match": "(?i)((\\$(A|C|M|P|O|R|S|T|V)|(\\$\\$(M|S)))\\w+)"
+                "match": "(?i)((\\$(A|C|G|K|M|N|O|P|R|S|T|V){1,2})(_([A-Z])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
             },
             {
                 "name": "variable.s840d.axis",
-                "match": "\\b(A|B|C|X|Y|Z)[0-9]{0,5}\\b"
+                "match": "(?i)\\b(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)[0-9]{0,5}\\b"
             },
             {
                 "name": "variable.s840d.rp_",
@@ -167,7 +167,7 @@
             },
             {
                 "name": "entity.name.function.s840d.mcode",
-                "match": "\\b(M[0-9]{1,4})+|\\bM\\b"
+                "match": "(?i)(\\b(M[0-9]{1,4})+\\b|(?i)\\bM\\b|(?i)\\b(QU)\\b)"
             },
             {
                 "name": "entity.name.function.s840d.subprogrammLoops",
@@ -181,15 +181,19 @@
 		"support":{
 			"patterns": [
 				{
-					"match": "\\b(axis|bool|char|frame|int|real|string)\\b",
-					"name": "support.class.scl"
+					"name": "support.class.scl",
+					"match": "\\b(axis|bool|char|frame|int|real|string)\\b"
                 }
             ]
 		},
         "constants": {
-            "patterns": [            {
+            "patterns": [{
                 "name": "constant.numeric.s840d.nr",
                 "match": "\\b[0-9]+\\b"
+            },
+            {
+                "name": "constant.numeric.s840d.binary",
+                "match": "(?i)'b[0-1]{1,32}'"
             },
             {
                 "name": "constant.numeric.s840d.hide",
@@ -226,7 +230,7 @@
             },
             {
                 "name": "keyword.operator.bool.s840d",
-                "match": "not|b_not|b_and|b_xor|b_or|and|xor|or"
+                "match": "\\b(not|b_not|b_and|b_xor|b_or|and|xor|or)\\b"
             }]
         },
         "comparison-operator": {
