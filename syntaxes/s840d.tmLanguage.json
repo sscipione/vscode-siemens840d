@@ -147,35 +147,35 @@
         "functions": {
             "patterns": [{
                 "name": "entity.name.function.s840d.toolCorrection",
-                "match": "\\bD[0-9]+|\\bD\\b|\\bDL\\b"
+                "match": "\\bD\\d+|\\bD\\b|\\bDL\\b"
             },
             {
                 "name": "entity.name.function.s840d.feedWord",
-                "match": "\\b(F[0-9])+|\\bF\\b|\\bF[ABDZ]{1,2}\\b"
+                "match": "\\b(F\\d)+|\\bF\\b|\\bF[ABDZ]{1,2}\\b"
             },
             {
                 "name": "entity.name.function.s840d.gcode",
-                "match": "\\b(G[0-9]{1,3})+|\\bG\\b"
+                "match": "\\b(G\\d{1,3})+|\\bG\\b"
             },
             {
                 "name": "entity.name.function.s840d.hcode",
-                "match": "\\b(H[0-9]{1,2})+|\\bH\\b"
+                "match": "\\b(H\\d{1,2})+|\\bH\\b"
             },
             {
                 "name": "entity.name.function.s840d.cycles",
-                "match": "\bL[0-9]+\b"
+                "match": "\\bL\\d+\\b"
             },
             {
                 "name": "entity.name.function.s840d.mcode",
-                "match": "(?i)(\\b(M[0-9]{1,4})+\\b|(?i)\\bM\\b|(?i)\\b(QU)\\b)"
+                "match": "(?i)(\\b(M\\d{1,4})+\\b|(?i)\\bM\\b|(?i)\\b(QU)\\b)"
             },
             {
                 "name": "entity.name.function.s840d.subprogrammLoops",
-                "match": "(\\bP)[0-9]{1,4}|\\bP\\b"
+                "match": "(\\bP)\\d{1,4}|\\bP\\b"
             },
             {
                 "name": "entity.name.function.s840d.toolSpeed",
-                "match": "(\\bS)[0-9]{1,2}|\\bS\\b"
+                "match": "(?i)(S\\d{1,2}\\s?(?==)|S(?=([\\d+]|=)))"
             }]
         },
 		"support":{
@@ -189,7 +189,7 @@
         "constants": {
             "patterns": [{
                 "name": "constant.numeric.s840d.nr",
-                "match": "\\b[0-9]+\\b"
+                "match": "\\d+"
             },
             {
                 "name": "constant.numeric.s840d.binary",
@@ -201,7 +201,7 @@
             },
             {
                 "name": "constant.numeric.s840d.linenumber",
-                "match": "\\bN[0-9]+\\b"
+                "match": "\\bN(\\d+)"
             },
             {
                 "name": "constant.numeric.s840d.label",
@@ -211,35 +211,38 @@
         "operators": {
             "name": "keyword.operator.s840d",
             "patterns": [
-                { "include": "#assignment-operator" },
-                { "include": "#arithmetik-operators" },
+                { "include": "#assignment-operators" },
                 { "include": "#comparison-operators" },
+                { "include": "#arithmetik-operators" },
+                { "include": "#boolean-operators" },
                 { "include": "#string-operators" }
             ]
         },
-        "assignment-operator": {
+        "assignment-operators": {
             "patterns": [{
-                "name": "keyword.operator.s840d",
-                "match": "\\b=\\b"
-                }]
-            },
+                "name": "keyword.operator.assignment.s840d",
+                "match": "(?<!=)=(?![=<>])"
+            }]
+        },
+        "comparison-operators": {
+            "patterns": [{
+                "name": "keyword.operator.comparison.s840d",
+                "match": "(?<!=+)==(?!=+)|(?<!=)(<)[=>]?|(?<!=)(>)=?"
+            }]
+        },
         "arithmetik-operators": {
             "patterns": [{
                 "name": "keyword.operator.arithmetik.s840d",
-                "match": "\\*|\\+|-|\\/\\/|\\/|\\bdiv\\b|\\bmod\\b|%"
-            },
-            {
+                "match": "(?<!%)%(?!%)|(?<!-)-(?!-)|(?<!\\+)\\+(?!\\+)|(?<!\\*)\\*(?!\\*)|(?<!\\/{1,2})\\/{1,2}(?!\\/{1,2})|\\b(div)\\b|\\b(mod)\\b"
+            }]
+        },
+        "boolean-operators": {
+            "patterns": [{
                 "name": "keyword.operator.bool.s840d",
                 "match": "\\b(not|b_not|b_and|b_xor|b_or|and|xor|or)\\b"
             }]
         },
-        "comparison-operator": {
-            "patterns": [{
-                "name": "keyword.operator.comparison.s840d",
-                "match": "==|<|>|>=|<=|<>"
-            }]
-        },
-        "string-operator": {
+        "string-operators": {
             "patterns": [{
                 "name": "keyword.operator.string.s840d",
                 "match": "<<"
