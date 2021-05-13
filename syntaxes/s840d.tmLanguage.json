@@ -125,79 +125,83 @@
         "systemvariables": {
             "patterns": [{
                 "name": "variable.s840d.system",
-                "match": "(?i)((\\$(A|C|G|K|M|N|O|P|R|S|T|V){1,2})(_([A-Z])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
+                "match": "(?i)((\\$(A|C|G|K|M|N|O|P|R|S|T|V){1,2})(_([A-Z\\d])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
             },
             {
                 "name": "variable.s840d.axis",
-                "match": "(?i)\\b(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)[0-9]{0,5}\\b"
+                "match": "(?i)\\b(?<!')(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(?!(\\d+.\\d+))\\d{1,5}(?!')\\b|(?<!')(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(?=-)(?!')\\b|(?<!')(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(?=(\\d+.\\d+))(?!')|\\b(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)\\b"
             },
             {
                 "name": "variable.s840d.rp_",
-                "match": "\\b_RP\\b"
+                "match": "(?i)\\b_RP\\b"
             },
             {
                 "name": "variable.s840d.r",
-                "match": "(\\bR[0-9]{1,4})|\\bR\\b"
+                "match": "(?i)(?<![A-Z])(\\$?R(?=[\\[\\d{,4}])\\d{,4})"
             },
             {
                 "name": "variable.s840d.user",
-                "match": "DAM|DTB|DTS|DP|DPR|ENC|FDEP|FDPR|FFR|FRF|MPIT|PIT|POSS|RFF|RFP|RPA|RPO|RPAP|RTP|SDAC|SDIR|SDIS|SDR|VARI"
+                "match": "(?i)\\b(DAM|DTB|DTS|DP|DPR|ENC|FDEP|FDPR|FFR|FRF|MPIT|PIT|POSS|RFF|RFP|RPA|RPO|RPAP|RTP|SDAC|SDIR|SDIS|SDR|VARI)\\b"
             }]
         },
         "functions": {
             "patterns": [{
                 "name": "entity.name.function.s840d.toolCorrection",
-                "match": "\\bD\\d+|\\bD\\b|\\bDL\\b"
+                "match": "(?i)\\bD\\d+|\\bD\\b|\\bDL\\b"
             },
             {
                 "name": "entity.name.function.s840d.feedWord",
-                "match": "\\b(F\\d)+|\\bF\\b|\\bF[ABDZ]{1,2}\\b"
+                "match": "(?i)(?<![A-Z])(F[ABDZ]{1,2})\\b|(?<![A-Z])F(?=(\\d+|\\s+\\d+|=\\d+|\\s+=\\d+|=\\s+\\d+|\\s+=\\s+\\d+))"
             },
             {
                 "name": "entity.name.function.s840d.gcode",
-                "match": "\\b(G\\d{1,3})+|\\bG\\b"
+                "match": "(?i)\\b(G\\d{1,3})+|\\bG\\b"
             },
             {
                 "name": "entity.name.function.s840d.hcode",
-                "match": "\\b(H\\d{1,2})+|\\bH\\b"
+                "match": "(?i)\\b((?<!')H\\d{1,2})+|\\bH\\b"
             },
             {
                 "name": "entity.name.function.s840d.cycles",
-                "match": "\\bL\\d+\\b"
+                "match": "(?i)\\bL\\d+\\b"
             },
             {
                 "name": "entity.name.function.s840d.mcode",
-                "match": "(?i)(\\b(M\\d{1,4})+\\b|(?i)\\bM\\b|(?i)\\b(QU)\\b)"
+                "match": "(?i)((?<![A-Z])(M\\d{1,})+|(?<![A-Z])M(?=(=QU|\\s+=QU|=\\s+QU|\\s+=\\s+QU))|(?<=(M=|M\\s+=|M=\\s+|M\\s+=\\s+))QU(?=\\())"
             },
             {
                 "name": "entity.name.function.s840d.subprogrammLoops",
-                "match": "(\\bP)\\d{1,4}|\\bP\\b"
+                "match": "(?i)(\\bP)\\d{1,4}|\\bP\\b"
             },
             {
                 "name": "entity.name.function.s840d.toolSpeed",
-                "match": "(?i)(S\\d{1,2}\\s?(?==)|S(?=([\\d+]|=)))"
+                "match": "(?i)(?<![A-Z])S\\d{0,2}(?=(=\\d+|\\s+=\\d+|=\\s+\\d|\\s+=\\s+\\d+))|(?<![A-Z])S(?=([\\d{3,}]|\\s+\\d+|=\\d+|\\s+=\\d+|\\s+=\\s+\\d+))"
             }]
         },
 		"support":{
 			"patterns": [
 				{
 					"name": "support.class.scl",
-					"match": "\\b(axis|bool|char|frame|int|real|string)\\b"
+					"match": "(?i)\\b(axis|bool|char|frame|int|real|string)\\b"
                 }
             ]
 		},
         "constants": {
             "patterns": [{
                 "name": "constant.numeric.s840d.nr",
-                "match": "\\d+"
+                "match": "(?i)(?<!^\\s*/)(?<![A-Z]{2,})(?<!_[A-Z])\\d+"
             },
             {
                 "name": "constant.numeric.s840d.binary",
-                "match": "(?i)'b[0-1]{1,32}'"
+                "match": "(?i)'B[0-1]{1,32}'"
             },
             {
-                "name": "constant.numeric.s840d.hide",
-                "match": "\\n\\s*\\/[0-7]?"
+                "name": "constant.numeric.s840d.hex",
+                "match": "(?i)'H[\\dA-F]{1,8}'"
+            },
+            {
+                "name": "constant.numeric.s840d.skip",
+                "match": "(?<=(^\\s*))\\/[0-7]"
             },
             {
                 "name": "constant.numeric.s840d.linenumber",
@@ -233,13 +237,13 @@
         "arithmetik-operators": {
             "patterns": [{
                 "name": "keyword.operator.arithmetik.s840d",
-                "match": "(?<!%)%(?!%)|(?<!-)-(?!-)|(?<!\\+)\\+(?!\\+)|(?<!\\*)\\*(?!\\*)|(?<!\\/{1,2})\\/{1,2}(?!\\/{1,2})|\\b(div)\\b|\\b(mod)\\b"
+                "match": "(?<!%)%(?!%)|(?<!-)-(?!-)|(?<!\\+)\\+(?!\\+)|(?<!\\*)\\*(?!\\*)|(?<!^\\s*)(?<!\\/{1,2})\\/{1,2}(?!\\/{1,2})|\\b(div)\\b|\\b(mod)\\b"
             }]
         },
         "boolean-operators": {
             "patterns": [{
                 "name": "keyword.operator.bool.s840d",
-                "match": "\\b(not|b_not|b_and|b_xor|b_or|and|xor|or)\\b"
+                "match": "(?i)\\b(not|b_not|b_and|b_xor|b_or|and|xor|or)\\b"
             }]
         },
         "string-operators": {
