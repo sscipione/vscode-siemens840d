@@ -130,7 +130,7 @@
             },
             {
                 "name": "variable.s840d.axis",
-                "match": "(?i)\\b(?<!')(?<![A-Z])(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)\\d+(?=((\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*)|\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+))(?!')\\b|(?<!')(?<![A-Z])(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(?=(\\d+\\.|\\d+(?!(\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*))(?!(\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+))|(?=((\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*|\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+)))))(?!')"
+                "match": "(?i)(?<!')(?<![A-Z])(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)\\d+(?=((\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*)|\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+))(?!')(?!(\\.\\d*))\\b|(?<!')(?<![A-Z]+\\d*)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(?=(\\d+\\.|\\d+(?!(\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*))(?!(\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+))|(?=((\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*|\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+)))))(?!')"
             },
             {
                 "name": "variable.s840d.rp_",
@@ -152,7 +152,7 @@
             },
             {
                 "name": "entity.name.function.s840d.feedWord",
-                "match": "(?i)(?<![A-Z])(F[ABDZ]{1,2})\\b|(?<![A-Z])F(?=(\\d+|\\s+\\d+|=\\d+|\\s+=\\d+|=\\s+\\d+|\\s+=\\s+\\d+))"
+                "match": "(?i)(?<![A-Z])(F[ABDZ]{1,2})\\b|(?<![A-Z])F(?=(\\d+|\\s+\\d+|=|\\s+=|=\\s+|\\s+=\\s+))"
             },
             {
                 "name": "entity.name.function.s840d.gcode",
@@ -168,7 +168,7 @@
             },
             {
                 "name": "entity.name.function.s840d.mcode",
-                "match": "(?i)((?<![A-Z])(M\\d{1,})+|(?<![A-Z])M(?=(=QU|\\s+=QU|=\\s+QU|\\s+=\\s+QU))|(?<=(M=|M\\s+=|M=\\s+|M\\s+=\\s+))QU(?=\\())"
+                "match": "(?i)((?<![A-Z])(M\\d+)+|(?<=(M\\d+=))\\d+|(?<![A-Z])M(?=(\\s*=\\s*QU))|(?<=(M\\s*=\\s*))QU(?=\\())"
             },
             {
                 "name": "entity.name.function.s840d.subprogrammLoops",
@@ -190,7 +190,7 @@
         "constants": {
             "patterns": [{
                 "name": "constant.numeric.s840d.nr",
-                "match": "(?i)(?<!^\\s*/)(?<![A-Z]{2,})(?<!_[A-Z])\\d+"
+                "match": "(?i)(?<!^\\s*/)(?<![A-Z]{2,}\\d*)(?<!_[A-Z])\\d+"
             },
             {
                 "name": "constant.numeric.s840d.binary",
@@ -202,15 +202,15 @@
             },
             {
                 "name": "constant.numeric.s840d.skip",
-                "match": "(?<=(^\\s*))\\/[0-7]"
+                "match": "(?i)(?<=(^\\s*(N\\d+\\s+)?))\\/[0-7]"
             },
             {
                 "name": "constant.numeric.s840d.linenumber",
-                "match": "(?i)(?<=(^\\s*))N(\\d+)"
+                "match": "(?i)(?<=(^\\s*))N\\d+"
             },
             {
                 "name": "constant.numeric.s840d.label",
-                "match": "__\\w+:"
+                "match": "(?i)(?<=(^\\s*(N\\d+\\s+)?))_*\\w+:"
             }]
         },
         "operators": {
