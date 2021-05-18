@@ -194,7 +194,7 @@
             },
             {
                 "name": "constant.numeric.s840d.binary",
-                "match": "(?i)'B[\\s\\t,]?([0-1][\\s\\t,]?)+'"
+                "match": "(?i)'B[0-1]{8}'|'B[0-1]{16}'|'B[0-1]{32}'"
             },
             {
                 "name": "constant.numeric.s840d.hex",
