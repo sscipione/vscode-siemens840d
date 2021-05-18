@@ -198,7 +198,7 @@
             },
             {
                 "name": "constant.numeric.s840d.hex",
-                "match": "(?i)'H[\\s\\t,]?([\\dA-F]{1,2}[\\s\\t,]?)+'"
+                "match": "(?i)'H[\\dA-F]{2}'|'H[\\dA-F]{4}'|'H[\\dA-F]{8}'"
             },
             {
                 "name": "constant.numeric.s840d.skip",
