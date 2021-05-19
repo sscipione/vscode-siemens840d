@@ -126,7 +126,7 @@
         "systemvariables": {
             "patterns": [{
                 "name": "variable.s840d.system",
-                "match": "(?i)((\\$(A|C|G|K|M|N|O|P|R|S|T|V){1,2})(_([A-Z\\d])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
+                "match": "(?i)((\\$(A|AC|AN|C|MA|MC|MM|MN|NK|NP|NT|ON|P|PA|PC|PN|R|RG|SA|SC|SN|TC|VA|VC))(_([A-Z\\d])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
             },
             {
                 "name": "variable.s840d.axis",
@@ -252,14 +252,6 @@
                 "name": "keyword.operator.string.s840d",
                 "match": "<<"
             }]
-        },
-        "containers": {
-            "patterns": [
-                {
-                    "name": "keyword.container.s840d",
-                    "match": "\\(|\\)|\\[|\\]|\\{|\\}"
-                }
-            ]
         }
     },
     "scopeName": "source.s840d"
