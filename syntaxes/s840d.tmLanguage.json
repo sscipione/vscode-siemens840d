@@ -189,12 +189,8 @@
 		},
         "constants": {
             "patterns": [{
-                "name": "constant.numeric.s840d.int",
-                "match": "(?i)(?<!_)(?<!_[A-Z]{2,}\\d*)\\d+(?!\\d*\\.\\d*)"
-            },
-            {
-                "name": "constant.numeric.s840d.float",
-                "match": "(?i)(?<!_)(?<!_[A-Z]{2,})\\d+.\\d+"
+                "name": "constant.numeric.s840d.nr",
+                "match": "\\d+"
             },
             {
                 "name": "constant.numeric.s840d.binary",
