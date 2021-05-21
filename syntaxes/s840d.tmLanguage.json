@@ -126,11 +126,11 @@
         "systemvariables": {
             "patterns": [{
                 "name": "variable.s840d.system",
-                "match": "(?i)((\\$(A|AC|AN|C|MA|MC|MM|MN|NK|NP|NT|ON|P|PA|PC|PN|R|RG|SA|SC|SN|TC|VA|VC))(_([A-Z\\d])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
+                "match": "(?i)((\\$(A|AC|AN|C|MA|MC|MM|MN|NK|NP|NT|OC|ON|P|PA|PC|PN|R|RG|SA|SC|SN|TC|VA|VC))(_([A-Z\\d])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
             },
             {
                 "name": "variable.s840d.axis",
-                "match": "(?i)(?<!['_])(?<![A-Z])(A|B|C|I|J|K|Q|U|V|W|X|Y|Z|(Ax[A-Z]+))\\d+(?=((\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*)|\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+))(?!')(?!(\\.\\d*))\\b|(?<!['_])(?<![A-Z]{2,}\\d*)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z|(Ax[A-Z]+))(?=(\\d+\\.|\\d+(?!(\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*))(?!(\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+))|(?=((\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*|\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+)))))(?!')"
+                "match": "(?i)(?<!['_])(?<![A-Z])(A|Ax|B|C|I|J|K|Q|U|V|W|X|Y|Z)\\d+(?=((\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*)|\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+))(?!')(?!(\\.\\d*))\\b|(?<!['_])(?<![A-Z]{2,}\\d*)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z|(Ax[A-Z]+))(?=(\\d+\\.|\\d+(?!(\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*))(?!(\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+))|(?=((\\s*[={1,2}\\(\\[\\)\\],\\/{1,2}\\*\\+-\\>\\<(\\>=)(\\<=)(\\<\\>)]\\s*|\\s+(MOD|DIV|NOT|AND|OR|XOR)\\s+)))))(?!')"
             },
             {
                 "name": "variable.s840d.rp_",
@@ -189,8 +189,12 @@
 		},
         "constants": {
             "patterns": [{
-                "name": "constant.numeric.s840d.nr",
-                "match": "(?i)(?<!^\\s*/)(?<![A-Z]{2,}\\d*)(?<!_[A-Z])\\d+"
+                "name": "constant.numeric.s840d.int",
+                "match": "(?i)(?<!_)(?<!_[A-Z]{2,}\\d*)\\d+(?!\\d*\\.\\d*)"
+            },
+            {
+                "name": "constant.numeric.s840d.float",
+                "match": "(?i)(?<!_)(?<!_[A-Z]{2,})\\d+.\\d+"
             },
             {
                 "name": "constant.numeric.s840d.binary",
