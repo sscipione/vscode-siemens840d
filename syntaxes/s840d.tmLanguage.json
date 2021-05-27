@@ -1,7 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "S840D",
+    "name": "s840d",
     "encoding": "ISO 8859-1",
+    "scopeName": "source.s840d",
     "patterns": [
         { "include": "#keywords" },
         { "include": "#strings" },
@@ -16,114 +17,91 @@
         "keywords": {
             "name":"keyword.control.s840d",
             "patterns": [
-                {"include": "#a"},
-                {"include": "#b"},
-                {"include": "#c"},
-                {"include": "#d"},
-                {"include": "#e"},
-                {"include": "#f"},
-                {"include": "#g"},
-                {"include": "#i"},
-                {"include": "#j"},
-                {"include": "#k"},
-                {"include": "#l"},
-                {"include": "#m"},
-                {"include": "#n"},
-                {"include": "#o"},
-                {"include": "#p"},
-                {"include": "#r"},
-                {"include": "#s"},
-                {"include": "#t"},
-                {"include": "#u"},
-                {"include": "#v"},
-                {"include": "#w"}
-            ],
-            "repository": {
-                "a": {
-                    "name": "keyword.control.s840d.a",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(abs|ac|acc|acclima|acn|acos|acp|actblocno|addframe|adis|adispos|adisposa|alf|amirror|ang|ap|apr|aprb|aprp|apw|apwb|apwp|apx|ar|arot|arot|arots|as|ascale|asin|aspline|atan2|atol|atrans|auxfudel|auxfudelg|auxfumseq|auxfusync|ax|axctswe|axctswec|axctswed|axname|axstring|axtochan|axtoint|axtospi)\\b"
                 },
-                "b": {
-                    "name": "keyword.control.s840d.b",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(bauto|block|blsync|bnat|bound|brisk|briska|bspline|btan)\\b"
                 },
-                "c": {
-                    "name": "keyword.control.s840d.c",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(cac|cacn|cacp|calcdat|calcposi|call|callpath|cancel|case|cdc|cdof|cdof2|cdon|cfc|cfin|cfine|cftcp|chan|chandata|chf|chkdm|chkdno|chr|cic|cip|clearm|clrint|cmirror|coarsea|collpair|compcad|compcurv|complete|compof|compon|contdcon|contpron|corrof|cos|coupdef|coupdel|coupof|coupofs|coupon|couponc|coupres|cp|cpbc|cpdef|cpdel|cpfmof|cpfmon|cpfmson|cpfpos|cpfrs|cpla|cplctid|cpldef|cpldel|cplden|cplinsc|cplintr|cplnum|cplof|cplon|cploutsc|cplouttr|cplpos|cplsetval|cpmalarm|cpmbrake|cpmprt|cpmreset|cpmstart|cpof|cpon|cprecof|cprecon|cpres|cprot|cprotdef|cpsettype|cpsyncop|cpsyncop2|cpsyncov|cpsynfip|cpsynfip2|cpsynfiv|cr|crot|crots|crpl|cscale|cspline|ct|ctab|ctabdef|ctabdel|ctabend|ctabexists|ctabfno|ctabfpol|ctabfseg|ctabid|ctabinv|ctabislock|ctablock|ctabmemtyp|ctabmpol|ctabmseg|ctabno|ctabnomem|ctabperiod|ctabpol|ctabpolid|ctabseg|ctabsegid|ctabsev|ctabssv|ctabtep|ctabtev|ctabtmax|ctabtmin|ctabtsp|ctabtsv|ctabunlock|ctol|ctrans|cut2d|cut2df|cut3dc|cut3dcc|cut3dccd|cut3df|cut3dff|cut3dfs|cutconof|cutconon|cutmod)\\b"
                 },
-                "d": {
-                    "name": "keyword.control.s840d.d",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(dac|dc|def|default|define|delayfstof|delayfston|deldl|deldtg|delete|delmlowner|delmlres|delmt|delobj|delt|deltc|deltoolenv|diacycofa|diam90|diam90a|diamchan|diamchana|diamcycof|diamof|diamofa|diamon|diamona|dic|dilf|disable|disc|discl|displof|displon|dispr|disr|disrp|dite|dits|dl|do|drfof|drive|drivea|dynfinish|dynnorm|dynpos|dynrough|dynsemifin|dzero)\\b"
                 },
-                "e": {
-                    "name": "keyword.control.s840d.e",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(eauto|egdef|egdel|egofc|egofs|egon|egonsyn|egonsyne|else|enable|enat|endfor|endif|endlabel|endloop|endproc|endwhile|esrr|esrs|etan|every|ex|execstring|exectab|execute|exp|extcall|extclose|extern|extopen)\\b"
                 },
-                "f": {
-                    "name": "keyword.control.s840d.f",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(false|fctdef|fcub|fda|fendnorm|ffwof|ffwon|fgref|fgroup|fi|fifoctrl|filedate|fileinfo|filesize|filestat|filetime|finea|fl|flin|fma|fnorm|foc|focof|focon|for|fp|fpo|fpr|fpraof|fpraon|frame|frc|frcm|from|ftoc|ftocof|ftocon|ftocof|ftocon|fxs|fxst|fxsw)\\b"
                 },
-                "g": {
-                    "name": "keyword.control.s840d.g",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(geoax|get|getactt|getacttd|getd|getdno|getexet|getfreeloc|getselt|gett|gettcor|gettenv|getvarap|getvardft|getvarlim|getvarphu|getvartyp|goto|gotob|gotoc|gotof|gotos|gp|gwpsof|gwpson)\\b"
                 },
-                "i": {
-                    "name": "keyword.control.s840d.i",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(id|ids|if|index|inicf|inipo|inire|init|initial|intersec|inttoax|invccw|invcw|invframe|ip|ipobrka|ipoenda|iptrlock|iptrunlock|isaxis|isd|isfile|isnumber|isocall|isvar)\\b"
                 },
-                "j": {
-                    "name": "keyword.control.s840d.j",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(jerka|jerklim|jerklima)\\b"
                 },
-                "k": {
-                    "name": "keyword.control.s840d.k",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(kont|kontc|kontt)\\b"
                 },
-                "l": {
-                    "name": "keyword.control.s840d.l",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(lead|leadof|leadon|lentoax|lfof|lfon|lfpos|lftxt|lfwp|liftfast|lims|lli|ln|lock|longhole|loop)\\b"
                 },
-                "m": {
-                    "name": "keyword.control.s840d.m",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(masldef|masldel|maslof|maslofs|maslon|match|maxval|mcall|meac|meaframe|meas|measa|measure|meaw|meawa|mi|mindex|minval|mirror|mmc|modaxval|mov|movt|msg|mvtool|msgs)\\b"
                 },
-                "n": {
-                    "name": "keyword.control.s840d.n",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(nametoint|nck|newconf|newmt|newt|norm|nprot|nprotdef|number)\\b"
                 },
-                "o": {
-                    "name": "keyword.control.s840d.o",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(oemipo1|oemipo2|of|offn|oma1|oma2|oma3|oma4|oma5|offn|oriaxes|oriaxpos|oric|oriconccw|oriconcw|oriconio|oriconto|oricurve|orid|orieuler|orimks|oripath|oriplane|orireset|orirota|orirotc|orirotr|orirott|orirpy|orirpy2|oris|orisof|orison|orivect|orivirt1|orivirt2|oriwks|os|osb|osc|oscill|osctrl|osd|ose|osnsc|osof|osp1|osp2|oss|osse|ost|ost1|ost2|otol|ovr|ovra|ovrrap)\\b"
                 },
-                "p": {
-                    "name": "keyword.control.s840d.p",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(parot|parotof|pcall|pdelayof|pdelayon|phi|phu|pl|pm|po|pocket3|pocket4|polf|polfa|polfmask|polfmlin|poly|polypath|pon|pons|pos|posa|posm|posmt|posp|posrange|pot|pr|prepro|preseton|preseton|prio|prloc|proc|prota|protd|prots|psi|ptp|ptpg0|punchacc|putftoc|putftocf|pw)\\b"
                 },
-                "r": {
-                    "name": "keyword.control.s840d.r",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(rac|rdisable|read|redef|release|rep|repeat|repeatb|reposa|reposh|reposha|reposl|reposq|reposqa|reset|resetmon|ret|ric|rindex|rmb|rmbbl|rme|rmebl|rmi|rmibl|rmn|rmnbl|rnd|rndm|rot|rots|round|roundup|rp|rpl|rt|rtliof|rtlion)\\b"
                 },
-                "s": {
-                    "name": "keyword.control.s840d.s",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(save|sblof|sblon|sc|scale|scc|scpara|sd|set|setal|setdno|setint|setm|setms|setmth|setpiece|setta|settcor|settia|sf|sin|sirelay|sirelin|sirelout|sireltime|slot1|slot2|soft|softa|son|sons|spath|spcof|spcon|spi|spif1|spif2|splinepath|spn|spof|spos|spos|sposa|spp|sprint|sqrt|sr|sra|st|sta|start|startfifo|stat|stolf|stopfifo|stopre|stopreof|stringis|strlen|substr|supa|svc|synfct|synr|synrw|synw)\\b"
                 },
-                "t": {
-                    "name": "keyword.control.s840d.t",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(tan|tang|tangdel|tangof|tangon|tca|tcarr|tci|tcoabs|tcofr|tcofrx|tcofry|tcofrz|theta|tilt|tlift|tml|tmof|tmon|to|toff|toffl|toffof|toffon|toffr|toframe|toframex|toframey|toframez|tolower|toolenv|toolgnt|toolgt|torot|torotof|torotx|toroty|torotz|toupper|towbcs|towkcs|towmcs|towstd|towtcs|towwcs|tr|traang|tracon|tracyl|trafoof|trailof|trailon|trans|transmit|traori|true|trunc|tu|turn)\\b"
                 },
-                "u": {
-                    "name": "keyword.control.s840d.u",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(uli|unlock|until|upath)\\b"
                 },
-                "v": {
-                    "name": "keyword.control.s840d.v",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(var|velolim|velolima)\\b"
                 },
-                "w": {
-                    "name": "keyword.control.s840d.w",
+                {
+                    "name": "keyword.control.s840d",
                     "match": "(?i)\\b(waitc|waite|waitenc|waitm|waitmc|waitp|waits|walcs0|walcs1|walcs2|walcs3|walcs4|walcs5|walcs6|walcs7|walcs8|walcs9|walcs10|walimof|walimon|when|whenever|while|write|wrtpr)\\b"
                 }
-            }
+            ]
         },
         "strings": {
             "name": "string.quoted.double.s840d",
@@ -144,179 +122,135 @@
         "variables": {
             "name": "variable.other.s840d",
             "patterns": [
-                {"include": "#system"},
-                {"include": "#axis"},
-                {"include": "#rp"},
-                {"include": "#r"},
-                {"include": "#user"}
-            ],
-            "repository": {
-                "system": {
+                {
                     "name": "variable.other.system.s840d",
                     "match": "(?i)((\\$(A|AC|AN|C|MA|MC|MM|MN|NK|NP|NT|OC|ON|P|PA|PC|PN|R|SA|SC|SN|TC|VA|VC))(_([A-Z\\d])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
                 },
-                "axis": {
-                    "patterns": [
-                        {
-                            "name": "variable.other.axis.s840d",
-                            "match": "(Ax)([a-zA-Z]{1,29})"
-                        },
-                        {
-                            "name": "variable.other.axis.s840d",
-                            "match": "(?i)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(\\d+)(?=(\\s+\\d+|\\s+\\d*\\.\\d+|\\s*(=|,|-|\\/|\\*|\\+|\\>|\\<|\\>=|\\<=|\\<\\>|\\(|\\)|\\[|\\])|\\s+(MOD|DIV|NOT|AND|OR|XOR)))"
-                        },
-                        {
-                            "name": "variable.other.axis.s840d",
-                            "match": "(?i)(?<![A-Z]+)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(?=(\\s+|\\d+|\\d*\\.\\d|\\s*(=|,|-|\\/|\\*|\\+|\\>|\\<|\\>=|\\<=|\\<\\>|\\(|\\)|\\[|\\])|\\s+(MOD|DIV|NOT|AND|OR|XOR)))"
-                        }
-                    ]
+                {
+                    "name": "variable.other.axis.s840d",
+                    "match": "(Ax)([a-zA-Z]{1,29})"
                 },
-                "rp": {
-                        "name": "variable.other.rp_.s840d",
-                        "match": "(?i)\\b_RP\\b"
+                {
+                    "name": "variable.other.axis.s840d",
+                    "match": "(?i)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(\\d+)(?=(\\s+\\d+|\\s+\\d*\\.\\d+|\\s*(=|,|-|\\/|\\*|\\+|\\>|\\<|\\>=|\\<=|\\<\\>|\\(|\\)|\\[|\\])|\\s+(MOD|DIV|NOT|AND|OR|XOR)))"
                 },
-                "r": {
-                        "name": "variable.other.r.s840d",
-                        "match": "(?i)(?<![A-Z])(\\$?RG?(?=[\\[\\d{,4}])\\d{,4})"
+                {
+                    "name": "variable.other.axis.s840d",
+                    "match": "(?i)(?<![A-Z]+)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(?=(\\s+|\\d+|\\d*\\.\\d|\\s*(=|,|-|\\/|\\*|\\+|\\>|\\<|\\>=|\\<=|\\<\\>|\\(|\\)|\\[|\\])|\\s+(MOD|DIV|NOT|AND|OR|XOR)))"
                 },
-                "user": {
-                        "name": "variable.other.user.s840d",
-                        "match": "(?i)\\b(DAM|DTB|DTS|DP|DPR|ENC|FDEP|FDPR|FFR|FRF|MPIT|PIT|POSS|RFF|RFP|RPA|RPO|RPAP|RTP|SDAC|SDIR|SDIS|SDR|VARI)\\b"
+                {
+                    "name": "variable.other.rp_.s840d",
+                    "match": "(?i)\\b_RP\\b"
                 },
-                "any": {
-                    "name": "variable.other.any.s840d",
-                    "match": "\\w+"
+                {
+                    "name": "variable.other.r.s840d",
+                    "match": "(?i)(?<![A-Z])(\\$?RG?(?=[\\[\\d{,4}])\\d{,4})"
+                },
+                {
+                    "name": "variable.other.user.s840d",
+                    "match": "(?i)\\b(DAM|DTB|DTS|DP|DPR|ENC|FDEP|FDPR|FFR|FRF|MPIT|PIT|POSS|RFF|RFP|RPA|RPO|RPAP|RTP|SDAC|SDIR|SDIS|SDR|VARI)\\b"
                 }
-            }
+            ]
         },
         "functions": {
             "name": "entity.name.function.s840d",
             "patterns": [
-                {"include": "#tool"},
-                {"include": "#tool-speed"},
-                {"include": "#feed"},
-                {"include": "#g-code"},
-                {"include": "#m-code"},
-                {"include": "#h-code"},
-                {"include": "#cycle"},
-                {"include": "#sub-loop"}
-            ],
-            "repository": {
-                "tool": {
+                {
                     "name": "entity.name.function.toolCorrection.s840d",
                     "match": "(?i)\\bD\\d+|\\bD\\b|\\bDL\\b"
                 },
-                "tool-speed": {
+                {
                     "name": "entity.name.function.toolSpeed.s840d",
                     "match": "(?i)(?<![A-Z])S\\d{0,2}(?=(=\\d+|\\s+=\\d+|=\\s+\\d|\\s+=\\s+\\d+))|(?<![A-Z])S(?=([\\d{3,}]|\\s+\\d+|=\\d+|\\s+=\\d+|\\s+=\\s+\\d+))"
                 },
-                "feed": {
+                {
                     "name": "entity.name.function.feedWord.s840d",
                     "match": "(?i)(?<![A-Z])(F[ABDZ]{1,2})\\b|(?<![A-Z])F(?=(\\d+|\\s+\\d+|=|\\s+=|=\\s+|\\s+=\\s+))"
                 },
-                "g-code": {
+                {
                     "name": "entity.name.function.gcode.s840d",
                     "match": "(?i)\\b(G\\d{1,3})+|\\bG\\b"
                 },
-                "m-code": {
+                {
                     "name": "entity.name.function.mcode.s840d",
                     "match": "(?i)((?<![A-Z])(M\\d+)+|(?<=(M\\d+=))\\d+|(?<![A-Z])M(?=(\\s*=\\s*QU))|(?<=(M\\s*=\\s*))QU(?=\\())"
                 },
-                "h-code": {
+                {
                     "name": "entity.name.function.hcode.s840d",
                     "match": "(?i)\\b((?<!')H\\d{1,2})+|\\bH\\b"
                 },
-                "cycle": {
+                {
                     "name": "entity.name.function.cycles.s840d",
                     "match": "(?i)\\bL\\d+\\b"
                 },
-                "sub-loop": {
+                {
                     "name": "entity.name.function.subprogrammLoops.s840d",
                     "match": "(?i)(\\bP)\\d{1,4}|\\bP\\b"
                 }
-            }
+            ]
         },
         "support": {
             "name": "support.class.s840d",
             "patterns": [
-                {"include": "#scl"}
-            ],
-            "repository": {
-                "scl": {
-                        "name": "support.class.scl.s840d",
-                        "match": "(?i)\\b(axis|bool|char|frame|int|real|string)\\b"
+                {
+                    "name": "support.class.scl.s840d",
+                    "match": "(?i)\\b(axis|bool|char|frame|int|real|string)\\b"
                 }
-            }
+            ]
         },
         "constants": {
             "name": "constant.numeric.s840d",
             "patterns": [
-                {"include": "#digit"},
-                {"include": "#binary"},
-                {"include": "#hex"},
-                {"include": "#skip"},
-                {"include": "#line-number"},
-                {"include": "#label"}
-            ],
-            "repository": {
-                "digit": {
+                {
                     "name": "constant.numeric.nr.s840d",
                     "match": "\\d+"
                 },
-                "binary": {
+                {
                     "name": "constant.numeric.binary.s840d",
                     "match": "(?i)'B[\\s\\t,]?([0-1][\\s\\t,]?)+'"
                 },
-                "hex": {
+                {
                     "name": "constant.numeric.hex.s840d",
                     "match": "(?i)'H[\\s\\t,]?([\\dA-F]{1,2}[\\s\\t,]?)+'"
                 },
-                "skip": {
+                {
                     "name": "constant.numeric.skip.s840d",
                     "match": "(?i)(?<=(^\\s*(N\\d+\\s+)?))\\/[0-7]"
                 },
-                "line-number": {
+                {
                     "name": "constant.numeric.linenumber.s840d",
                     "match": "(?i)(?<=(^\\s*))N\\d+"
                 },
-                "label": {
+                {
                     "name": "constant.numeric.label.s840d",
                     "match": "(?i)(?<=(^\\s*(N\\d+\\s+)?))_*\\w+:"
                 }
-            }
+            ]
         },
         "operators": {
             "name": "keyword.operator.s840d",
             "patterns": [
-                { "include": "#assignment-operators" },
-                { "include": "#comparison-operators" },
-                { "include": "#arithmetik-operators" },
-                { "include": "#boolean-operators" },
-                { "include": "#string-operators" }
-            ],
-            "repository": {
-                "assignment-operators": {
+                {
                     "name": "keyword.operator.assignment.s840d",
                     "match": "(?<!=)=(?![=<>])"
                 },
-                "comparison-operators": {
+                {
                     "name": "keyword.operator.comparison.s840d",
                     "match": "(?<![=<>]+)==(?![=<>]+)|(?<!=)(<)[=>]?(?![=<>]+)|(?<!=)(>)=?(?![=<>]+)"
                 },
-                "arithmetik-operators": {
+                {
                     "name": "keyword.operator.arithmetik.s840d",
                     "match": "(?i)(?<!%)%(?!%)|(?<!-)-(?!-)|(?<!\\+)\\+(?!\\+)|(?<!\\*)\\*(?!\\*)|(?<!^\\s*)(?<!\\/{1,2})\\/{1,2}(?!\\/{1,2})|\\b(div)\\b|\\b(mod)\\b"
                 },
-                "boolean-operators": {
+                {
                     "name": "keyword.operator.bool.s840d",
                     "match": "(?i)\\b(not|b_not|b_and|b_xor|b_or|and|xor|or)\\b"
                 },
-                "string-operators": {
+                {
                     "name": "keyword.operator.string.s840d",
                     "match": "<<"
                 }
-            }
+            ]
         }
-    },
-    "scopeName": "source.s840d"
+    }
 }
