@@ -7,11 +7,11 @@
         { "include": "#keywords" },
         { "include": "#strings" },
         { "include": "#comments" },
-        { "include": "#variables" },
         { "include": "#functions" },
         { "include": "#support" },
         { "include": "#constants" },
-        { "include": "#operators" }
+        { "include": "#operators" },
+        { "include": "#variables" }
     ],
     "repository": {
         "keywords": {
@@ -124,22 +124,10 @@
             "patterns": [
                 {
                     "name": "variable.other.system.s840d",
-                    "match": "(?i)((\\$(A|AC|AN|C|MA|MC|MM|MN|NK|NP|NT|OC|ON|P|PA|PC|PN|R|SA|SC|SN|TC|VA|VC))(_([A-Z\\d])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
+                    "match": "(?i)((\\$(A|AA|AC|AN|C|MA|MC|MM|MN|NK|NP|NT|OC|ON|P|PA|PC|PN|R|SA|SC|SN|TC|VA|VC))(_([A-Z\\d])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
                 },
-                {
-                    "name": "variable.other.axis.s840d",
-                    "match": "(Ax)([a-zA-Z]{1,29})"
-                },
-                {
-                    "name": "variable.other.axis.s840d",
-                    "match": "(?i)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(\\d+)(?=(\\s+\\d+|\\s+\\d*\\.\\d+|\\s*(=|,|-|\\/|\\*|\\+|\\>|\\<|\\>=|\\<=|\\<\\>|\\(|\\)|\\[|\\])|\\s+(MOD|DIV|NOT|AND|OR|XOR)))"
-                },
-                {
-                    "name": "variable.other.axis.s840d",
-                    "match": "(?i)(?<![A-Z]+)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(?=(\\s+|\\d+|\\d*\\.\\d|\\s*(=|,|-|\\/|\\*|\\+|\\>|\\<|\\>=|\\<=|\\<\\>|\\(|\\)|\\[|\\])|\\s+(MOD|DIV|NOT|AND|OR|XOR)))"
-                },
-                {
-                    "name": "variable.other.rp_.s840d",
+                                {
+                    "name": "variable.other._rp.s840d",
                     "match": "(?i)\\b_RP\\b"
                 },
                 {
@@ -149,6 +137,22 @@
                 {
                     "name": "variable.other.user.s840d",
                     "match": "(?i)\\b(DAM|DTB|DTS|DP|DPR|ENC|FDEP|FDPR|FFR|FRF|MPIT|PIT|POSS|RFF|RFP|RPA|RPO|RPAP|RTP|SDAC|SDIR|SDIS|SDR|VARI)\\b"
+                },
+                {
+                    "name": "variable.other.axis.s840d",
+                    "match": "(Ax)([a-zA-Z]{1,29})"
+                },
+                {
+                    "name": "variable.other.axis.s840d",
+                    "match": "(?i)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(\\d+)(?=(\\n|\\s+\\d+|\\s+\\d*\\.\\d+|\\s*(=|,|-|\\/|\\*|\\+|\\>|\\<|\\>=|\\<=|\\<\\>|\\(|\\)|\\[|\\])|\\s+(MOD|DIV|NOT|AND|OR|XOR)))"
+                },
+                {
+                    "name": "variable.other.axis.s840d",
+                    "match": "(?i)(?<![A-Z]+)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(?=(\\s+|\\d+|\\d*\\.\\d|\\s*(=|,|-|\\/|\\*|\\+|\\>|\\<|\\>=|\\<=|\\<\\>|\\(|\\)|\\[|\\])|\\s+(MOD|DIV|NOT|AND|OR|XOR)))"
+                },
+                {
+                    "name": "variable.other.misc.s840d",
+                    "match": "(?i)(?<!\\d)\\b_?[A-Z]\\w*\\b"
                 }
             ]
         },
@@ -202,16 +206,32 @@
             "name": "constant.numeric.s840d",
             "patterns": [
                 {
-                    "name": "constant.numeric.nr.s840d",
-                    "match": "\\d+"
+                    "name": "constant.numeric.float.s840d",
+                    "match": "\\d*\\.\\d+"
+                },
+                {
+                    "name": "constant.numeric.integer.s840d",
+                    "match": "\\d+(?!\\.)"
                 },
                 {
                     "name": "constant.numeric.binary.s840d",
-                    "match": "(?i)'B[\\s\\t,]?([0-1][\\s\\t,]?)+'"
+                    "begin": "(?i)('B)",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "match": "[\\s\\t,]?([0-1][\\s\\t,]?)+"
+                        }
+                    ]
                 },
                 {
                     "name": "constant.numeric.hex.s840d",
-                    "match": "(?i)'H[\\s\\t,]?([\\dA-F]{1,2}[\\s\\t,]?)+'"
+                    "begin": "(?i)('H)",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "match": "[\\s\\t,]?([\\dA-F]{1,2}[\\s\\t,]?)+"
+                        }
+                    ]
                 },
                 {
                     "name": "constant.numeric.skip.s840d",
