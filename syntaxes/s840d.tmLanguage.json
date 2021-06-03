@@ -140,7 +140,7 @@
                 },
                 {
                     "name": "variable.other.axis.s840d",
-                    "match": "(Ax)([a-zA-Z]{1,29})"
+                    "match": "(Ax)([a-zA-Z\\d]{1,29})"
                 },
                 {
                     "name": "variable.other.axis.s840d",
