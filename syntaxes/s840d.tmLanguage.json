@@ -173,7 +173,7 @@
                 },
                 {
                     "name": "entity.name.function.gcode.s840d",
-                    "match": "(?i)\\b(G\\d{1,3})+|\\bG\\b"
+                    "match": "(?i)(G\\d{1,3})+"
                 },
                 {
                     "name": "entity.name.function.mcode.s840d",
