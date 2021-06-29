@@ -161,7 +161,15 @@
                 },
                 {
                     "name": "entity.name.function.toolSpeed.s840d",
-                    "match": "(?i)(?<![A-Z])S\\d{0,2}(?=(=\\d+|\\s+=\\d+|=\\s+\\d|\\s+=\\s+\\d+))|(?<![A-Z])S(?=([\\d{3,}]|\\s+\\d+|=\\d+|\\s+=\\d+|\\s+=\\s+\\d+))"
+                    "match": "(?i)(?<![A-Z])S\\d{1,2}(?=(\\s*=\\s*))"
+                },
+                {
+                    "name": "entity.name.function.toolSpeed.s840d",
+                    "match": "(?i)(?<![A-Z])S(?=(\\d{3,}))(?!(\\s*=\\s*))"
+                },
+                {
+                    "name": "entity.name.function.toolSpeed.s840d",
+                    "match": "(?i)(?<![A-Z])S(?=(\\s*=\\s*))"
                 },
                 {
                     "name": "entity.name.function.feedWord.s840d",
