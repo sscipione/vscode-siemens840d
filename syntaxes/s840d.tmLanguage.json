@@ -106,11 +106,7 @@
         "strings": {
             "name": "string.quoted.double.s840d",
             "begin": "\"",
-            "end": "\"",
-            "patterns": [{
-                "name": "constant.character.escape.s840d",
-                "match": "\\\\."
-            }]
+            "end": "\""
         },
         "comments": {
             "name":"comment.s840d",
