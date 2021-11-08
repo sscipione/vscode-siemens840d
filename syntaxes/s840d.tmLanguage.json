@@ -140,7 +140,7 @@
                 },
                 {
                     "name": "variable.other.axis.s840d",
-                    "match": "(?i)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(\\d+)(?=(\\n|\\s+\\d+|\\s+\\d*\\.\\d+|\\s*(=|,|-|\\/|\\*|\\+|\\>|\\<|\\>=|\\<=|\\<\\>|\\(|\\)|\\[|\\])|\\s+(MOD|DIV|NOT|AND|OR|XOR)))"
+                    "match": "(?i)(A|B|C|I|J|K|Q|U|V|W|X|Y|Z)(\\d+)(?=(\\n|\\s+\\d+|\\s+\\d*\\.\\d+|\\s*(;|=|,|-|\\/|\\*|\\+|\\>|\\<|\\>=|\\<=|\\<\\>|\\(|\\)|\\[|\\])|\\s+(MOD|DIV|NOT|AND|OR|XOR)))"
                 },
                 {
                     "name": "variable.other.axis.s840d",
