@@ -3,7 +3,7 @@
     "displayName": "siemens840d",
     "description": "Siemens 840D Language Support",
     "version": "0.0.2",
-    "publisher": "OKaeferstein",
+    "publisher": "SScipione",
     "engines": {
         "vscode": "^1.12.0"
     },
