@@ -4,6 +4,7 @@
     "description": "Siemens 840D Language Support",
     "version": "0.0.2",
     "publisher": "SScipione",
+    "repository":  {"Siemens 840d": "https://github.com/sscipione/vscode-siemens840d"},
     "engines": {
         "vscode": "^1.12.0"
     },
