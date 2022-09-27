@@ -5,6 +5,7 @@
     "version": "0.0.2",
     "publisher": "SScipione",
     "repository":  {"Siemens 840d": "https://github.com/sscipione/vscode-siemens840d"},
+    "icon": "logo.png",
     "engines": {
         "vscode": "^1.12.0"
     },
