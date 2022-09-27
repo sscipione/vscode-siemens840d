@@ -7,31 +7,6 @@ This is the README for your extension "siemens840d". After writing up a brief de
 - https://raw.githubusercontent.com/Armitxes/VSCode_SQF/master/syntaxes/sqf.json
 - https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
 
-## Install
-
-Open windows command line and switch to the drive (e.g. `C:`) where you installed windows then switch to the vscode extension directory and clone/checkout the reposisitory
-
-```sh
-cd %USERPROFILE%/.vscode/extensions
-git clone https://lcg01.ludwigsburg.inetgleason.com/okaeferstein/vscode-siemens840d.git
-```
-
-in case of an error
-```sh
-fatal: unable to access 'https://lcg01.ludwigsburg.inetgleason.com/okaeferstein/vscode-siemens840d.git/': SSL certificate problem: unable to get local issuer certificate
-```
-
-please override SSL cert checking by
-
-```sh
-cd %USERPROFILE%/.vscode/extensions
-git -c http.sslVerify=false clone https://lcg01.ludwigsburg.inetgleason.com/okaeferstein/vscode-siemens840d.git
-```
-
-
-
-Close / open vscode and you should have `S840D` syntax type added to VSCode.
-
 ## Features
 
  ```plantuml
