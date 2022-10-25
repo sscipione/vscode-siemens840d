@@ -2,7 +2,7 @@
     "name": "siemens840d",
     "displayName": "siemens840d",
     "description": "Siemens 840D Language Support",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "SScipione",
     "repository": {
         "Siemens 840d": "https://github.com/sscipione/vscode-siemens840d"
