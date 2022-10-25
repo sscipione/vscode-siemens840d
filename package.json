@@ -46,5 +46,11 @@
                 "path": "./syntaxes/s840d.tmLanguage.json"
             }
         ]
+    },
+    "__metadata": {
+        "id": "24d27e9b-d685-4ab5-b9e8-44beec1d0047",
+        "publisherDisplayName": "SScipione",
+        "publisherId": "e78d7634-f549-434a-845c-6a400e345049",
+        "isPreReleaseVersion": false
     }
 }

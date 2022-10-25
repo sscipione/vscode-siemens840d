@@ -120,7 +120,7 @@
             "patterns": [
                 {
                     "name": "variable.other.system.s840d",
-                    "match": "(?i)((\\$(A|AA|AC|AN|C|MA|MC|MM|MN|NK|NP|NT|OC|ON|P|PA|PC|PN|R|SA|SC|SN|TC|VA|VC))(_([A-Z\\d])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
+                    "match": "(?i)((\\$(A{1,2}|AC|AN|C|MA|MC|MM|MN|NK|NP|NT|OC|ON|P|PA|PC|PN|R|SA|SC|SN|TC|VA|VC))(_([A-Z\\d])+)+)|((\\$[A-Z]{3,})(_([A-Z])+)*)"
                 },
                                 {
                     "name": "variable.other._rp.s840d",
@@ -128,7 +128,7 @@
                 },
                 {
                     "name": "variable.other.r.s840d",
-                    "match": "(?i)(?<![A-Z])(\\$?RG?(?=[\\[\\d{,4}])\\d{,4})"
+                    "match": "(?i)(?<![A-Z])(\\${1,2}RG?(?=[\\[\\d{,4}])\\d{,4})"
                 },
                 {
                     "name": "variable.other.user.s840d",
